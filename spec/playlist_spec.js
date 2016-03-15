@@ -1,5 +1,25 @@
 'use strict'
 
+var jasmine = require('jasmine-node');
+var jsdom = require('jsdom');
+var path = require('path');
+describe("Jasmine Walkthrough", function(){
+var addToPlaylist, removeFromPlaylist, changePlaylistSong, readPlaylist;
+beforeEach(function(done) {
+ var codeJs = path.resolve(__dirname, '..', 'playlist.js');
+ jsdom.env({
+   html: '<div></div>',
+   scripts: [codeJs],
+   onload: function(window) {
+     addToPlaylist = window.addToPlaylist;
+     removeFromPlaylist = window.removeFromPlaylist;
+     changePlaylistSong = window.changePlaylistSong;
+     readPlaylist = window.readPlaylist;
+     done();
+   }
+ });
+});
+
 describe('addToPlaylist', function(){
   var myPlaylist;
 
@@ -73,4 +93,5 @@ describe('readPlaylist', function(){
     expect(console.log.calls.argsFor(0)).toEqual(["your playlist is empty"])
   });
 
+});
 });
