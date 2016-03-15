@@ -19,7 +19,7 @@ function readPlaylist(playlist) {
   if (Object.keys(playlist).length == 0){
     console.log("your playlist is empty");
   } else {
-    for(var artist in playlist) {
+    for (var artist in playlist) {
       console.log("The song " + playlist[artist] + " by " + artist + " is in your playlist");
     }
   }
