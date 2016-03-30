@@ -11,6 +11,11 @@ describe('addToPlaylist', function(){
     var tswiftPlaylist = {"taylor swift": "out of the woods"};
     expect(addToPlaylist(myPlaylist, "out of the woods", "taylor swift")).toEqual(tswiftPlaylist);
   });
+
+  it("returns an object with a key-value pair", function() {
+    var newKeyValue = {"anderson paak": "malibu" };
+    expect(addToPlaylist(myPlaylist, "malibu", "anderson paak")).toEqual(newKeyValue);
+  });
 });
 
 describe('removeFromPlaylist', function(){
