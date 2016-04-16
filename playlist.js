@@ -1,8 +1,10 @@
 'use strict';
 
-// var hash = {playboicarti: "rapper"};
+// var hash = {playboicarti: "rapper"}; >> create
 
-// hash["ziggy"] = "rapper"; // delete hash["ziggy"];
+// hash["ziggy"] = "rapper"; >> add and edit
+
+// delete hash["ziggy"]; >> delete
 
 // Object.keys(hash); to check if object is empty
 
