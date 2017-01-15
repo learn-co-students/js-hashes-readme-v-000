@@ -1,4 +1,5 @@
-// var playlist = newObject();
+var playlist = { key:'value'}
+
 
 function updatePlaylist(playlist, artist, title){
 
