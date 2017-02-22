@@ -1,4 +1,4 @@
-var playlist = new Object();
+var playlist = {};
 
 //function updatePlaylist(playlist, name, song) {
 //var playlist = {"name": "song"}
@@ -9,11 +9,11 @@ var playlist = new Object();
 //}
 
 function updatePlaylist(playlist, name, song) {
-  playlist["name"] = "song"
-  return playlist
+  playlist[name] = song;
+  return playlist;
 }
 
 function removeFromPlaylist(playlist, name) {
-    delete playlist["name"];
-	playlist;
+    delete playlist[name];
+	   return playlist;
 }
