@@ -1,7 +1,7 @@
 
 'use strict';
 
-var playlist = {"taylor swift": "out of the woods"}
+// var myPlaylist = {"taylor swift": "out of the woods"}
 
 function addToPlaylist(playlist, song, artist){
   playlist[artist] = song;
@@ -14,7 +14,7 @@ function removeFromPlaylist(playlist, artist){
 }
 
 
-function updatePlaylist(playlist, artistName, songTitle){
-  playlist[artistName] = songTitle;
+function changePlaylistSong(playlist, song, artist){
+  playlist[artist] = song;
   return playlist;
 }
